@@ -32,6 +32,19 @@ UserErrors.CONFLICT = {
   developerMessage: 'User with this email is already exists'
 };
 
+UserErrors.GET_USER_USER_NOT_FOUND = {
+	errorCode: 1006,
+	statusCode: 400,
+	developerMessage: 'User with specified id doesn\'t exist'
+};
+
+UserErrors.GET_USERS_LIST_ERROR = 
+{
+	errorCode: 1007,
+	statusCode: 500,
+	developerMessage: 'There was a problem while fetching users list'
+}
+
 UserErrors.NOT_IMPLEMENTED = {
   errorCode: 1999,
   statusCode: 501,
