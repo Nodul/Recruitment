@@ -14,7 +14,7 @@ class UsersService {
     // todo: Look at createUserDTO properties for user input
 	try
 	{
-		let user = await new DB.User(
+		let user = await DB.User.createUser(
 		{
 			email : createUserDTO.email,
 			firstName : createUserDTO.firstName,
@@ -44,7 +44,7 @@ class UsersService {
 	try
 	{
 		let pagination = new Pagination(getUsersListDTO,1,10,100);
-		let users = await new DB.User.getUserList(pagination.offset, pagination.pageSize);
+		let users = await DB.User.getUsersList(pagination.offset, pagination.pageSize);
 		
 		return new ServiceResult(null, users);
 	}
