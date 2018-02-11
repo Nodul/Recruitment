@@ -29,7 +29,7 @@ module.exports = function (sequelize, DataTypes) {
 		  lastName : model.lastName,
 		  password : model.password
 	  });
-  }
+  };
 
   User.getUsersList = async function(offset,limit)
   {
