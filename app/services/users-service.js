@@ -28,7 +28,7 @@ class UsersService {
 	catch(error)
 	{
 		console.log(error);
-		return new ServiceResult(null,null);
+		return new ServiceResult(UserErrors.CREATE_WRONG_DATA);
 	}  
   }
    
